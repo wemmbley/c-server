@@ -48,15 +48,6 @@ int main() {
             printf("Received: %s\n", buffer);
         }
 
-        // Отправка ответа клиенту
-        const char* response =
-            "HTTP/1.1 200 OK\r\n"
-            "Content-Type: text/html\r\n"
-            "Content-Length: 27\r\n"
-            "Connection: close\r\n"
-            "\r\n"
-            "<h1>Hello, world!</h1>";
-
         // Запускаем PHP интепретатор и кладем содержимое ответа в текстовый файл
         system("php -f server.php > output.txt");
 
